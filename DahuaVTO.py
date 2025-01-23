@@ -539,7 +539,7 @@ class DahuaVTOManager:
 
                 loop = asyncio.new_event_loop()
 
-                client = loop.create_connection(DahuaVTOClient, self._host, 5000)
+                client = loop.create_connection(DahuaVTOClient, self._host, 35000)
                 loop.run_until_complete(client)
                 loop.run_forever()
                 loop.close()
